@@ -52,9 +52,9 @@
 # Enable audio (loads snd_bcm2835)
 #dtparam=audio=on
 
-# Enable Legacy Camera
-start_x=1
-gpu_mem=128
+# Disable Legacy Camera. If you want to enable, uncomment the following 2 lines
+#start_x=1
+#gpu_mem=128
 
 # Automatically load overlays for detected DSI displays
 display_auto_detect=1
@@ -81,3 +81,4 @@ dtoverlay=vc4-fkms-v3d
 arm_boost=1
 
 [all]
+dtoverlay=ov9281
