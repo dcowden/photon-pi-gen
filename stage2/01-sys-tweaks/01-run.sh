@@ -11,11 +11,6 @@ install -m 644 files/console-setup   	"${ROOTFS_DIR}/etc/default/"
 
 install -m 755 files/rc.local		"${ROOTFS_DIR}/etc/"
 
-mkdir -p "${ROOTFS_DIR}/opt/photonvision"
-cp -r files/photonvision_config "${ROOTFS_DIR}/opt/photonvision"
-curl -sL "${PHOTONVISION_JAR_URL}" --output "${ROOTFS_DIR}/opt/photonvision/photonvision.jar"
-install -m 644 files/photonvision.service "${ROOTFS_DIR}/lib/systemd/system/"
-
 if [ -n "${PUBKEY_SSH_FIRST_USER}" ]; then
 	install -v -m 0700 -o 1000 -g 1000 -d "${ROOTFS_DIR}"/home/"${FIRST_USER_NAME}"/.ssh
 	echo "${PUBKEY_SSH_FIRST_USER}" >"${ROOTFS_DIR}"/home/"${FIRST_USER_NAME}"/.ssh/authorized_keys
