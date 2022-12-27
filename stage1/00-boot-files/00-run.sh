@@ -5,3 +5,4 @@ install -m 644 files/config.txt "${ROOTFS_DIR}/boot/"
 install -m 644 files/userconf.txt "${ROOTFS_DIR}/boot/"
 
 wget https://datasheets.raspberrypi.org/cmio/dt-blob-cam1.bin -O /boot/dt-blob.bin
+

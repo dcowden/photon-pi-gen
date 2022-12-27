@@ -35,6 +35,9 @@ file
 kms++-utils
 pigpiod pigpio
 openjdk-11-jdk-headless
+ntp
+default-jdk
+vim
 libtbb2
 git
 libegl1 

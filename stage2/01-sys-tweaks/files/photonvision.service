@@ -1,9 +1,10 @@
 [Unit]
-Description=PhotonVision server
+Description=PhotonVision Server
 
 [Service]
 WorkingDirectory=/opt/photonvision
 ExecStart=java -jar /opt/photonvision/photonvision.jar
+ExecStop=/bin/systemctl kill photonvision
 Type=simple
 Restart=on-failure
 RestartSec=1

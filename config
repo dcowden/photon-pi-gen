@@ -8,3 +8,7 @@ DEPLOY_COMPRESSION="xz"
 KEYBOARD_KEYMAP=us
 KEYBOARD_LAYOUT="English (US) - English (US\\, international with dead keys)"
 TIMEZONE_DEFAULT=America/New_York
+DEPLOY_ZIP=0
+PRESERVE_CONTAINER=0
+CONTINUE=0
+PHOTONVISION_JAR_URL=https://github.com/PhotonVision/photonvision/releases/download/v2021.1.3/photonvision-v2021.1.3.jar

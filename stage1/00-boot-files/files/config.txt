@@ -49,12 +49,25 @@
 
 # Enable High-speed OV9281 Camera
 # Instructions from https://www.amazon.com/gp/product/B09WTP5GZH
-dtparam=i2c_vc=on,dtoverlay=ov9281
+dtparam=i2c_vc=on
+dtoverlay=ov9281
 
 # Additional overlays and parameters are documented /boot/overlays/README
 
+[cm3]
+# Gloworm and Limelight specific support
 # Enable audio (loads snd_bcm2835)
-#dtparam=audio=on
+dtparam=audio=on
+
+dtparam=cam0_reg
+dtparam=cam0_reg_gpio=3
+dtoverlay=cm-swap-i2c0
+dtoverlay=ov5647,cam0
+dtoverlay=enc28j60
+
+
+[all]
+
 
 # Automatically load overlays for detected DSI displays
 display_auto_detect=1
@@ -62,6 +75,9 @@ camera_auto_detect=1
 
 # Enable DRM VC4 V3D driver
 dtoverlay=vc4-kms-v3d
+dtparam=spi=on
+dtparam=audio=off
+
 max_framebuffers=2
 
 # Run in 64-bit mode
@@ -76,10 +92,17 @@ disable_overscan=1
 # (e.g. for USB device mode) or if USB support is not required.
 otg_mode=1
 
+
 [pi4]
 dtoverlay=vc4-fkms-v3d
 # Run as fast as firmware / board allows
 arm_boost=1
 
-[all]
-dtoverlay=ov9281
+#camera_auto_detect=1
+gpu_mem=256
+dtoverlay=pi3-disable-bt
+gpio=45=op,dh
+disable_camera_led=1
+disable_splash=1
+force_eeprom_read=0
+
