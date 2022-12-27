@@ -47,6 +47,10 @@
 #dtoverlay=gpio-ir,gpio_pin=17
 #dtoverlay=gpio-ir-tx,gpio_pin=18
 
+# Enable High-speed OV9281 Camera
+# Instructions from https://www.amazon.com/gp/product/B09WTP5GZH
+dtparam=i2c_vc=on,dtoverlay=ov9281
+
 # Additional overlays and parameters are documented /boot/overlays/README
 
 # Enable audio (loads snd_bcm2835)
