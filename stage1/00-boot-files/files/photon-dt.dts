@@ -3197,8 +3197,6 @@
 			};
 		};
 
-		# Gloworm- and limelight-specific config
-		# probably doesn't work on a stock cm3
 		pins_cm3 {
 			pin_config {
 				pin@default {
