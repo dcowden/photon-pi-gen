@@ -1,4 +1,4 @@
-IMG_NAME='PhotonVision'
+IMG_NAME='PhotonVision_arm64'
 TARGET_HOSTNAME=photonvision
 ENABLE_SSH=1
 PI_GEN=photon-pi-gen
